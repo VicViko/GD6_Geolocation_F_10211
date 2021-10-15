@@ -155,40 +155,4 @@ public class MainActivity extends AppCompatActivity implements
         super.onLowMemory();
         mapView.onLowMemory();
     }
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.menu_map_style, menu);
-        return true;
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-// Handle item selection
-        switch (item.getItemId()) {
-            case R.id.menu_streets:
-                mapboxMap.setStyle(Style.MAPBOX_STREETS);
-                return true;
-            case R.id.menu_dark:
-                mapboxMap.setStyle(Style.DARK);
-                return true;
-            case R.id.menu_light:
-                mapboxMap.setStyle(Style.LIGHT);
-                return true;
-            case R.id.menu_outdoors:
-                mapboxMap.setStyle(Style.OUTDOORS);
-                return true;
-            case R.id.menu_satellite:
-                mapboxMap.setStyle(Style.SATELLITE);
-                return true;
-            case R.id.menu_satellite_streets:
-                mapboxMap.setStyle(Style.SATELLITE_STREETS);
-                return true;
-            case android.R.id.home:
-                finish();
-                return true;
-            default:
-                return super.onOptionsItemSelected(item);
-        }
-    }
-
 }
